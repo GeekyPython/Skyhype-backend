@@ -19,10 +19,11 @@ const validateSignup = (signupData) => {
 
 router.post("/user", async (req, res) => {
 
-    // console.log("We have got an request");
+    console.log("We have got an request");
 
     try {
         let user = await Audit.findOne({ $or: [{ email: req.body.email }, { phone: req.body.phone }] })
+        console.log(user);
         if (user) return res.status(400).send("User is already registerd with same email or phone number")
 
         const error = validateSignup(req.body);

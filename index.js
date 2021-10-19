@@ -32,9 +32,9 @@ app.use('/user-details', user_details_route);
 app.use('/user-interests', user_interests_route);
 app.use('/styles', styles_section_route);
 
-app.get("*",(req,res) => {
+app.get("*", (req, res) => {
     console.log(process.cwd());
-    res.sendFile(path.join(process.cwd(),"/build/index.html"));
+    res.sendFile(path.join(process.cwd(), "/build/index.html"));
 });
 
 mongoose.connect(database_url)
