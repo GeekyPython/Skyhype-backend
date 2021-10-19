@@ -8,6 +8,7 @@
     "start": "node index.js",
     "heroku-postbuild": "npm i"
   },
+  "proxy": "https://skyhype-test.herokuapp.com",
   "keywords": [
     "Skyhype"
   ],
