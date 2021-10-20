@@ -17,7 +17,7 @@ const validateSignup = (signupData) => {
     return SignUpValidationSchema.validate(signupData);
 }
 
-router.post("/signup", async (req, res) => {
+router.post("/user", async (req, res) => {
 
     console.log("We have got an request");
 
