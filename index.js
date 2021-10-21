@@ -21,6 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('build'))
+app.use(cors());
 
 //Configuring Routes
 app.use("/", signup_route);
